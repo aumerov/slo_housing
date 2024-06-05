@@ -11,7 +11,7 @@ export const housingOptions = [
                 landlordRating: 3,
                 housingRating: 3,
                 likes: "The pricing is good for the location and size of the house.", 
-                dislikes: "However, the property management is not communicative and slightly shady"
+                dislikes: "The property management is not communicative and slightly shady"
             },
             {
                 rating: 3,
@@ -54,22 +54,6 @@ export const housingOptions = [
     },
     {
         id: 3,
-        image: "https://www.dci-engineers.com/uploads/projects/_1200x600_crop_center-center_none/CalPolySLOHousing_PhotoByBruceDamonte_09.jpg",
-        landlordName: "Cal Poly University",
-        address: "1 Grand Ave, San Luis Obispo, CA 93401",
-        overallRating: 4,
-        reviews: [
-            {
-                rating: 4,
-                landlordRating: 4,
-                housingRating: 4,
-                likes: "GReally close to my classes.",
-                dislikes: "Campus food is awful."
-            }
-        ]
-    },
-    {
-        id: 4,
         image: "https://images.cdn.appfolio.com/regpm/images/b973671c-9070-4cef-a891-dfceda5238af/medium.jpeg",
         landlordName: "REG Property Management",
         address: "1243 Bond Street - Unit #B, San Luis Obispo, CA 93405",
@@ -88,6 +72,22 @@ export const housingOptions = [
                 housingRating: 5,
                 likes: "I like the location, my house is pretty big, and it has laundry and a dishwasher included.",
                 dislikes: "Its outdated and the tile in the kitchen is so ugly. We also can't have pets. "
+            }
+        ]
+    },
+    {
+        id: 4,
+        image: "https://www.dci-engineers.com/uploads/projects/_1200x600_crop_center-center_none/CalPolySLOHousing_PhotoByBruceDamonte_09.jpg",
+        landlordName: "Cal Poly University",
+        address: "1 Grand Ave, San Luis Obispo, CA 93401",
+        overallRating: 4,
+        reviews: [
+            {
+                rating: 4,
+                landlordRating: 4,
+                housingRating: 4,
+                likes: "GReally close to my classes.",
+                dislikes: "Campus food is awful."
             }
         ]
     },

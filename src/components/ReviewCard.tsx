@@ -14,7 +14,7 @@ const ReviewCard: React.FC<{ rating: number, landlordRating: number, housingRati
 
     return (
         <div className="review-card">
-            <div className="star-rating">{renderStars(rating)}</div>
+            <div className="star-rating">{renderStars(5)}</div>
             <div className="review-content">
                 <p><strong>Landlord Rating:</strong> {renderStars(landlordRating)}</p>
                 <p><strong>Housing Rating:</strong> {renderStars(housingRating)}</p>

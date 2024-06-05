@@ -9,7 +9,8 @@ const ReviewForm: React.FC<ReviewFormProps> = ({ addReview }) => {
     const [rating, setRating] = useState(0);
     const [landlordRating, setLandlordRating] = useState(0);
     const [housingRating, setHousingRating] = useState(0);
-    const [comments, setcomments] = useState('');
+    const [likes, setLikes] = useState('');
+    const [dislikes, setDislikes] = useState('');
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
@@ -17,15 +18,16 @@ const ReviewForm: React.FC<ReviewFormProps> = ({ addReview }) => {
             rating,
             landlordRating,
             housingRating,
-            comments,
-            
+            likes,
+            dislikes
         };
         addReview(newReview);
         // Reset form fields
         setRating(0);
         setLandlordRating(0);
         setHousingRating(0);
-        setcomments('');
+        setLikes('');
+        setDislikes('');
     };
     return (
         <form className= "review-form" onSubmit={handleSubmit}>
@@ -43,8 +45,12 @@ const ReviewForm: React.FC<ReviewFormProps> = ({ addReview }) => {
                 <input type="number" value={housingRating} onChange={e => setHousingRating(parseInt(e.target.value))} min="1" max="5" />
             </label>
             <label>
-                Comments:
-                <textarea value={comments} onChange={e => setcomments(e.target.value)} />
+                What did you like about your housing? 
+                <textarea value={likes} onChange={e => setLikes(e.target.value)} />
+            </label>
+            <label>
+            What did you not like about your housing? 👀☕
+                <textarea value={dislikes} onChange={e => setDislikes(e.target.value)} />
             </label>
             <button type="submit">Submit Review</button>
         </form>

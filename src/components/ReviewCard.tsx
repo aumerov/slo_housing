@@ -2,7 +2,7 @@ import React from 'react';
 import './ReviewCard.css';
 
 
-const ReviewCard: React.FC<{ rating: number, landlordRating: number, housingRating: number, comments: string }> = ({ rating, landlordRating, housingRating, comments }) => {
+const ReviewCard: React.FC<{ rating: number, landlordRating: number, housingRating: number, likes: string, dislikes: string }> = ({ rating, landlordRating, housingRating, likes, dislikes }) => {
     // Helper function to create star ratings
     const renderStars = (rating: number) => {
         return Array.from({ length: 5 }, (_, index) => {
@@ -18,7 +18,8 @@ const ReviewCard: React.FC<{ rating: number, landlordRating: number, housingRati
             <div className="review-content">
                 <p><strong>Landlord Rating:</strong> {renderStars(landlordRating)}</p>
                 <p><strong>Housing Rating:</strong> {renderStars(housingRating)}</p>
-                <p>{comments}</p>
+                <p><strong>Likes: </strong>{likes}</p>
+                <p><strong>Dislikes: </strong>{dislikes}</p>
                 <p>- Anonymous User</p>
             </div>
             {/* <div className="review-footer">

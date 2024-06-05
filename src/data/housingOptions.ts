@@ -93,6 +93,22 @@ export const housingOptions = [
     },
     {
         id: 5,
+        image: "https://images1.apartments.com/i2/kJTjD9i4_c3uwfwCfvlswGkZsi8irphdM2msF8NIF_Y/111/250-california-blvd-unit-102-san-luis-obispo-ca-primary-photo.jpg",
+        landlordName: "Cal Park Apartments ",
+        address: "250 California Blvd #101, San Luis Obispo, CA 93405",
+        overallRating: 4.5,
+        reviews: [
+            {
+                rating: 4.5,
+                landlordRating: 5,
+                housingRating: 4,
+                likes: "Spacious bedroom, location, parking, personal bathroom. ",
+                dislikes: "No outdoor spaces, no gate or security on property "
+            }
+        ]
+    },
+    {
+        id: 6,
         image: "https://www.dci-engineers.com/uploads/projects/_1200x600_crop_center-center_none/CalPolySLOHousing_PhotoByBruceDamonte_09.jpg",
         landlordName: "Cal Poly University",
         address: "1 Grand Ave, San Luis Obispo, CA 93401",

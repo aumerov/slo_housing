@@ -1,29 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { housingOptions } from '../data/housingOptions';
 import HousingInfo from '../components/HousingInfo';
 import ReviewForm from '../components/ReviewForm';
 import ReviewCard from '../components/ReviewCard';
 
 const ReviewPage: React.FC = () => {
+    const { id } = useParams<{ id: string }>();
+    const [housing, setHousing] = useState(housingOptions.find(h => h.id.toString() === id));
+
+    if (!housing) return <div>No housing found</div>;
+
+    const addReview = (newReview: any) => {
+        const updatedReviews = [...housing.reviews, newReview];
+        const updatedHousing = { ...housing, reviews: updatedReviews };
+        setHousing(updatedHousing);
+    };
+
     return (
         <div className="page-content">
-            <HousingInfo
-                image="https://www.dci-engineers.com/uploads/projects/_1200x600_crop_center-center_none/CalPolySLOHousing_PhotoByBruceDamonte_09.jpg"
-                landlordName="John Doe"
-                address="1234 Main St, YourCity"
-                overallRating={4}
-            />
-            <div className="review-form-container">
-                <ReviewForm />
-            </div>
-            {/* Mock data for review cards, replace with dynamic data later */}
-            <ReviewCard 
-                rating={5}
-                landlordRating={4}
-                housingRating={4}
-                likes="Great location and view."
-                dislikes="Can be noisy at night."
-            />
-            {/* Additional ReviewCards would be added here */}
+            <HousingInfo {...housing} />
+            <ReviewForm addReview={addReview} />
+            {housing.reviews.map((review, index) => (
+                <ReviewCard key={index} {...review} />
+            ))}
         </div>
     );
 };

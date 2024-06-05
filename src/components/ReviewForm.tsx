@@ -1,41 +1,50 @@
 import React, { useState } from 'react';
 import './ReviewForm.css';
 
-const ReviewForm: React.FC = () => {
-    const [rating, setRating] = useState(1);
-    const [landlordRating, setLandlordRating] = useState(1);
-    const [housingRating, setHousingRating] = useState(1);
-    const [likes, setLikes] = useState('');
-    const [dislikes, setDislikes] = useState('');
+interface ReviewFormProps {
+    addReview: (review: any) => void;  // Callback function to add a new review to the housing data
+}
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Here, you would normally handle the submission to the database
-        console.log({ rating, landlordRating, housingRating, likes, dislikes });
-        alert('Review submitted!');
+const ReviewForm: React.FC<ReviewFormProps> = ({ addReview }) => {
+    const [rating, setRating] = useState(0);
+    const [landlordRating, setLandlordRating] = useState(0);
+    const [housingRating, setHousingRating] = useState(0);
+    const [comments, setcomments] = useState('');
+
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+        const newReview = {
+            rating,
+            landlordRating,
+            housingRating,
+            comments,
+            
+        };
+        addReview(newReview);
+        // Reset form fields
+        setRating(0);
+        setLandlordRating(0);
+        setHousingRating(0);
+        setcomments('');
     };
-
     return (
-        <form className="review-form" onSubmit={handleSubmit}>
+        <form className= "review-form" onSubmit={handleSubmit}>
+            <h1>Leave a review!</h1>
             <label>
-                Star Rating:
+                Overall Rating:
                 <input type="number" value={rating} onChange={e => setRating(parseInt(e.target.value))} min="1" max="5" />
             </label>
             <label>
-                Rate your experience with your landlord:
+                Landlord Rating:
                 <input type="number" value={landlordRating} onChange={e => setLandlordRating(parseInt(e.target.value))} min="1" max="5" />
             </label>
             <label>
-                Rate your overall housing experience:
+                Housing Rating:
                 <input type="number" value={housingRating} onChange={e => setHousingRating(parseInt(e.target.value))} min="1" max="5" />
             </label>
             <label>
-                What did you like about your housing?
-                <textarea value={likes} onChange={e => setLikes(e.target.value)} />
-            </label>
-            <label>
-                What did you NOT like about your housing?
-                <textarea value={dislikes} onChange={e => setDislikes(e.target.value)} />
+                Comments:
+                <textarea value={comments} onChange={e => setcomments(e.target.value)} />
             </label>
             <button type="submit">Submit Review</button>
         </form>

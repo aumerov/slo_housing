@@ -1,0 +1,43 @@
+.home-page {
+    position: relative; /* Ensures the container's position is relative to its normal flow */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start to prevent stretching */
+    min-height: 100vh; /* Min-height ensures it covers at least the full viewport height */
+    background-image: url('https://magazine.calpoly.edu/wp-content/uploads/2019/05/Spaces-WEB-crop-2560x1440.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; /* Ensures the image does not repeat */
+}
+
+.container, .page-content {
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensures that it uses the full width available */
+}
+
+
+.housing-card-link {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden; /* Prevents content from spilling out */
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+    /* max-height: 19.45vh; */
+
+
+
+.housing-card-link:hover {
+    transform: scale(1.05); 
+}
+
+.container, .page-content {
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,23 @@
+/* Global style modifications */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px; /* Adjust based on your preference */
+}
+
+/* This will ensure all content has padding from the edges */
+.page-content {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.review-form-container {
+    width: 60%;
+    margin: 0 auto; /* Centers the form */
+}

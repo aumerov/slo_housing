@@ -1,0 +1,56 @@
+.auth-page {
+    padding: 0 20px; /* Adds 20px padding to both sides */
+    max-width: 600px; /* Limits the maximum width of the form */
+    margin: auto; /* Centers the form horizontally */
+    background-color: #f9f9f9; /* Optional: Sets a background color for the entire auth page */
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center; /* Centers the text horizontally */
+    width: 100%; /* Ensures the h1 element spans the full width */
+    margin-top: 20px; /* Provides space above the h1 */
+    color: #333; /* Sets the text color */
+}
+
+.input-group {
+    margin-bottom: 20px; /* Space between input groups */
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-group-text {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.login-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Makes the button full width */
+    font-size: 18px;
+}
+
+.login-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.construction-banner {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px; /* Space from the login form */
+    font-size: 24px;
+    color: white;
+    background-color: #ff6347; /* Tomato color */
+    border-radius: 4px;
+}

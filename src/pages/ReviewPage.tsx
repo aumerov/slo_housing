@@ -4,6 +4,7 @@ import { housingOptions } from '../data/housingOptions';
 import HousingInfo from '../components/HousingInfo';
 import ReviewForm from '../components/ReviewForm';
 import ReviewCard from '../components/ReviewCard';
+import "./ReviewPage.css";
 
 const ReviewPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();

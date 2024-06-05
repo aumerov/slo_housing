@@ -8,6 +8,7 @@
     flex-direction: row; /* Ensures content is in a row */
     align-items: center; /* Vertically centers the items in the card */
     border: 1px solid #ddd; /* Subtle border */
+    max-width: 500;
 }
 
 .housing-image {

@@ -77,6 +77,22 @@ export const housingOptions = [
     },
     {
         id: 4,
+        image: "https://images.cdn.appfolio.com/pcmusa/images/9eccc268-a8e5-4de5-9e6d-0e070f5c6c2c/large.png",
+        landlordName: "Pacific Capital Management ",
+        address: "3591 Sacramento Dr. #6, San Luis Obispo, CA 93401",
+        overallRating: 2.5,
+        reviews: [
+            {
+                rating: 2.5,
+                landlordRating: 2,
+                housingRating: 3,
+                likes: "Walking distance to campus",
+                dislikes: "House is on a dark street and landlord is difficult to get into contact with. "
+            }
+        ]
+    },
+    {
+        id: 5,
         image: "https://www.dci-engineers.com/uploads/projects/_1200x600_crop_center-center_none/CalPolySLOHousing_PhotoByBruceDamonte_09.jpg",
         landlordName: "Cal Poly University",
         address: "1 Grand Ave, San Luis Obispo, CA 93401",
@@ -86,7 +102,7 @@ export const housingOptions = [
                 rating: 4,
                 landlordRating: 4,
                 housingRating: 4,
-                likes: "GReally close to my classes.",
+                likes: "Really close to my classes.",
                 dislikes: "Campus food is awful."
             }
         ]
